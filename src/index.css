@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #FEFDFB;
+    color: #33332E;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gold-600 px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-gold-700 hover:shadow-lg hover:shadow-gold-600/20 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-gold-300 bg-transparent px-6 py-3 text-sm font-medium text-gold-700 transition-all duration-300 hover:border-gold-500 hover:bg-gold-50 active:scale-95;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-ink-600 transition-colors hover:bg-ink-50 hover:text-ink-900;
+  }
+
+  .input-field {
+    @apply w-full rounded-xl border border-ink-200 bg-white px-4 py-3 text-sm text-ink-800 placeholder-ink-400 transition-colors focus:border-gold-500 focus:outline-none focus:ring-2 focus:ring-gold-500/20;
+  }
+
+  .label-field {
+    @apply mb-1.5 block text-sm font-medium text-ink-700;
+  }
+
+  .card {
+    @apply rounded-2xl border border-ink-100 bg-white shadow-sm transition-all duration-300;
+  }
+
+  .section-padding {
+    @apply px-4 py-16 sm:px-6 lg:px-8;
+  }
+
+  .container-max {
+    @apply mx-auto max-w-7xl;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #D4AF7A 0%, #B8945F 50%, #9A7A4A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(180deg, rgba(21, 21, 19, 0.3) 0%, rgba(21, 21, 19, 0.5) 50%, rgba(21, 21, 19, 0.7) 100%);
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer utilities {
+  .animate-delay-100 { animation-delay: 0.1s; animation-fill-mode: both; }
+  .animate-delay-200 { animation-delay: 0.2s; animation-fill-mode: both; }
+  .animate-delay-300 { animation-delay: 0.3s; animation-fill-mode: both; }
+  .animate-delay-500 { animation-delay: 0.5s; animation-fill-mode: both; }
+}
